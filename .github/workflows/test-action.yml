@@ -15,4 +15,4 @@ jobs:
         uses: actions/checkout@v4
       - name: Echo message
         run: |
-          echo "입력받은 메시지: ${{ github.event.inputs.message }}"
+          echo "입력받은 메시지: ${{ github.event.inputs.message }} / ${{ github.event.inputs.category }} / ${{ github.event.inputs.default }}"
