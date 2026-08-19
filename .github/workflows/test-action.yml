@@ -6,6 +6,14 @@ on:
         description: '테스트 메시지'
         required: false
         default: 'hello'
+      category:
+        description: '카테고리'
+        required: false
+        default: 'default-category'
+      customValue:
+        description: '고정값 테스트'
+        required: false
+        default: 'fixed'
 
 jobs:
   test-job:
