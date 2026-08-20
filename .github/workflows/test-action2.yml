@@ -29,5 +29,5 @@ jobs:
         run: |
           echo "입력받은 메시지 githubAction2: ${{ github.event.inputs.message }} / ${{ github.event.inputs.category }} / ${{ github.event.inputs.customValue }}
           ${{ github.event.inputs.customValue2 }}"
-      - name: Wait 40 seconds                                                                                                                                                                                  
-        run: sleep 40
+      - name: Wait 10 seconds                                                                                                                                                                                  
+        run: sleep 10
