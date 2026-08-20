@@ -1,1 +1,33 @@
+name: Test Action
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: '테스트 메시지'
+        required: false
+        default: 'hello'
+      category:
+        description: '카테고리'
+        required: false
+        default: 'default-category'
+      customValue:
+        description: '고정값 테스트'
+        required: false
+        default: 'fixed'
+      customValue2:
+        description: '고정값 테스트2'
+        required: false
+        default: 'fixed2'
 
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Echo message
+        run: |
+          echo "입력받은 메시지 githubAction2: ${{ github.event.inputs.message }} / ${{ github.event.inputs.category }} / ${{ github.event.inputs.customValue }}
+          ${{ github.event.inputs.customValue2 }}"
+      - name: Wait 20 seconds                                                                                                                                                                                  
+        run: sleep 20
