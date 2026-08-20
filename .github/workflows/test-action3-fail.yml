@@ -31,3 +31,9 @@ jobs:
           ${{ github.event.inputs.force_fail }}"
       - name: Wait 5 seconds                                                                                                                                                                                  
         run: sleep 5
+      - name: Force fail if requested                                                                                                                                                                          
+        if: ${{ github.event.inputs.force_fail == 'true' }}                                                                                                                                                    
+        run: |                                                                                                                                                                                                 
+          echo "force_fail=true 이므로 의도적으로 실패시킵니다"                                                                                                                                                
+          exit 1                                                                                                                                                                                               
+                    
