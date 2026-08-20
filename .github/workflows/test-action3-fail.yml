@@ -1,4 +1,4 @@
-name: Test Action
+name: Test Action Fail
 on:
   workflow_dispatch:
     inputs:
@@ -29,5 +29,5 @@ jobs:
         run: |
           echo "입력받은 메시지: ${{ github.event.inputs.message }} / ${{ github.event.inputs.category }} / ${{ github.event.inputs.customValue }}
           ${{ github.event.inputs.force_fail }}"
-      - name: Wait 20 seconds                                                                                                                                                                                  
-        run: sleep 20
+      - name: Wait 60 seconds                                                                                                                                                                                  
+        run: sleep 60
